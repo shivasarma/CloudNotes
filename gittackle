@@ -1,0 +1,78 @@
+finally git was working through the debian distribution of ubuntu.
+
+The steps are as follows;
+
+Sudo apt-get install git
+
+git remote add origin <remote url>
+
+this remote url is the url of the repository in the git domain.
+
+Attempt pulling the git repository will sync any of the git materials available there
+
+pushing the git repository will sync
+
+git commit will save the changes locally
+
+git status provides the details of the status
+
+git init will initially initializes and seed the git repo in the mentioned folder
+
+git pull will pull all the code in the existing libraries. 
+  
+
+//Commands executed on September 25
+  
+  653  sudo mkdir CloudNotes
+  654  pushd CloudNotes/
+  655  git init
+  656  sudo git init
+  657  sudo cp ../LinuxCourseNotes LinuxNotes
+  658  git status
+  659  git add LinuxNotes 
+  660  sudo git add LinuxNotes 
+  661  sudo git commit
+  662  git status
+  663  git commit -m "notes as on September 25"
+  664  sudo git commit -m "notes as on September 25"
+  665  git statis
+  666  git status
+  667  git push LinuxNotes
+  668  git push --set-upstream LinuxNotes master
+  669  sudo git push --set-upstream LinuxNotes master
+  670  sudo git pull
+  671  sudo git pull 
+  672  sudo git pull https://github.com/sivathemonk/CloudNotes
+  673  ls
+  674  git status
+  675  git push 
+  676  git remote add
+  677  git remote add cloudnotes https://github.com/sivathemonk/CloudNotes
+  678  git push 
+  679  git push LinuxNotes
+  680  git push --set-upstream LinuxNotes master 
+  681  sudo git push --set-upstream LinuxNotes master 
+  682  git pull
+  683  git pull https://github.com/sivathemonk/CloudNotes
+  684  sudo git pull https://github.com/sivathemonk/CloudNotes
+  685  git remote add origin https://github.com/sivathemonk/CloudNotes
+  686  sudo git remote add origin https://github.com/sivathemonk/CloudNotes
+  687  git push		//gives the error
+  688  sudo git push --set-upstream origin master 
+  689  git status
+  690  sudo vim LinuxNotes 
+  691  git status
+  692  git commit -a
+  693  sudo git commit -a
+  694  sudo git commit -a -m "this is just for testing"
+  695  git push
+  696  cat ~/.bash_history 
+  697  vim ~/.bash_history 
+  698  cat history
+  699  history
+  700  history | cat >> history
+  701  sudo history | cat >> history
+  702  sudo history | sudo cat >> history
+  703  sudo history >> ~/Documents/history
+  704  history
+  705  history >> ~/Documents/history
