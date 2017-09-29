@@ -1,0 +1,27 @@
+BINARY TREE
+-----------
+
+
+A binary tree is composed of nodes connected by edges. Some binary tree, t, is either empty or consists of a single root element with two distinct binary tree child elements known as the left subtree and the right subtree of t.
+
+
+The following diagram depicts two different binary trees:
+
+
+					_________
+				        |	|
+					|   A	|
+					|_______|
+					/	\
+				       /         \
+			      _______ /           \_______
+			     |       |            |       |
+			     |   B   |		  |   E	  |
+			     |_______|            |_______|
+			     /	     		 /	   \
+		            /         		/	    \
+		    _______/           	 ______/	     \_______
+		    |       |		|	|	     |	     |	
+		    |   C   |		|   F	|	     |	 D   |	
+		    |_______|		|_______|	     |_______|
+				      
