@@ -49,7 +49,7 @@ find
 [cmd] find /usr -type f -name gcc //lists only regular files
 
 
-[cmd] find -name "*swp" -exec rm {} ';' // the flower brackets is a place holder that well be filled with all the file names that result from the find expression and the preceding command will be run on each one individually.
+[cmd] find -name "*swp" -exec rm {} ';' // the flower brackets is a place holder that will be filled with all the file names that result from the find expression and the preceding command will be run on each one individually.
 
 note that the command should end with ';'/";"
 
@@ -138,6 +138,67 @@ Runnning	// it means it is either currently executing instructions on a CPU, or 
 
 sleep state	//generally when they are waiting for something to happen before they can resume
 
-////  This is to test the changes in the GIT-HUB /////
+
+
+BASH SCRIPTING
+--------------
+
+The following is the sample bash script
+
+#!/bin/bash
+echo "sairam"
+
+
+The first line #!/bin/bash  should be recognized by anyone who has developed any kind of script in UNIX environments.
+
+The first line of the script contains #! which states the complete path of the command interpreter
+
+We can opt for few more choices in command interpreter.
+
+Some of the interpreters are 
+
+--> /usr/bin/perl
+--> /bin/bash
+--> /bin/csh
+--> /usr/bin/python
+--> /bin/sh
+
+
+Linux provides a wide range of shells which are listed in /etc/shells
+
+	let us see how to create more interactive example
+
+	#!/bin/bash
+	# Interactive reading of a variable
+	echo "ENTER YOUR NAME"
+	read name
+	# Display variable input
+	echo the name given was :$name
+
+
+BASIC SYNTAX and Special Characters
+-----------------------------------
+
+# - used to add a comment, except when used as \# or as #!
+
+\ - used as newline character
+
+; - used to point a new command execution
+
+$ - indicates what follows is an environment variable
+
+> - Redirect Output
+
+>> - append output
+
+< - Redirect Input
+
+| - used to pipe the result into the next command
+
+
+The newline character is used to split the lengthy commands like
+
+scp google.com:/var/ftp/datas \
+ facebooke.com:/opt/datas/ 
 
 

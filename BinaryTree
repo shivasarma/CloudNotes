@@ -86,6 +86,8 @@ A Binary Search tree(BST) is either empty or satisfies the following 3 condition
 
 --> Both left tree and right tree are BSTs.
 
+--> This kind of tree is called Binary search tree.
+
 The above points are demonstrated in the above digram.
 
 
