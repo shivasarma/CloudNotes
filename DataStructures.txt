@@ -1,0 +1,32 @@
+
+DATA STRUCTURES
+---------------
+
+From edx IIT Bombay
+-------------------
+
+--> Datatypes are equivalent to DataStructures. Example int can also be called as DataStructure
+
+--> So it is important to note how much of memory do each data structure holds. The memory allocations are as follows;
+
+ => signed char = 1 byte
+ => int = 2 / 4 bytes
+ => unsigned int = 2 / 4 bytes 
+ => short = 2 bytes
+
+Let's adding two integers with a above the range of extremities are impossible to perform.
+
+
+The above stated built-in datatypes can also be termed as built in datastructures
+
+
+VARIABLE AND CLASS
+-----------------
+
+A variable is a value type and a class is a reference type just like pointer.
+
+Therefore a class stores the reference in form of heap. Value type is stack. Which means object declared lives in form of heap and value type in form of stack.
+
+	Specifically calling the variable loads entire stack whereas loadig a object by default loads null reference, and if a reference exists it references to the address to the memory of heap
+
+

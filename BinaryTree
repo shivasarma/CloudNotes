@@ -1,0 +1,93 @@
+BINARY TREE
+-----------
+
+
+A binary tree is composed of nodes connected by edges. Some binary tree, t, is either empty or consists of a single root element with two distinct binary tree child elements known as the left subtree and the right subtree of t.
+
+
+The following diagram depicts two different binary trees:
+
+
+					_________
+				        |	|
+					|   A	|
+					|_______|
+					/	\
+				       /         \
+			      _______ /           \_______
+			     |       |            |       |
+			     |   B   |		  |   E	  |
+			     |_______|            |_______|
+			     /	     		 /	   \
+		            /         		/	    \
+		    _______/           	 ______/	     \_______
+		    |       |		|	|	     |	     |	
+		    |   C   |		|   F	|	     |	 D   |	
+		    |_______|		|_______|	     |_______|
+				      
+
+
+Here are the basic facts and terms to know about binary trees
+
+-->The convention for binary tree diagrams is that the root is at the top and subtrees branch down from it.
+
+-->A node's left and right subtrees are referred to as children and that node can be referred to as the parent of those subtrees
+
+--> A non-root node with no children is called a leaf
+
+--> A node A can be ancestor of some node B if B is located in a left or a right subtree whose root node is A. This means that the root node of  a binary tree is ancestor of all other nodes.
+
+--> The depth/level of a node is the distance from the node to its root node, where the distance is number of edges.
+
+--> A non-root node with no children is called a leaf
+
+--> Simply put the height of a tree is the number of edges(distance) from the root node to the leaf.
+
+
+Let's apply some of the terms we learned above to the binary tree shown above:
+
+--> The root node is A
+
+--> The respective left and right children of A are B and E. The left child of B is C. The left and right children of E are F and D.
+
+--> Nodes C, F and D are leaves
+
+--> The A(root node) is the ancestor of all other nodes. B is the ancestor of C, E is the ancestor of F and D,
+
+--> The depth of node A is 1, The depth of nodes B, E is 2. The depth of c, F, D nodes is 3.
+
+--> The height of tree is 2
+
+
+
+
+					_________
+				        |	|
+					|  33	|
+					|_______|
+					/	\
+				       /         \
+			      _______ /           \_______
+			     |       |            |       |
+			     |  21   |		  |  35	  |
+			     |_______|            |_______|
+			     /	     		 /	   \
+		            /         		/	    \
+		    _______/           	 ______/	     \_______
+		    |       |		|	|	     |	     |	
+		    |  20   |		|  34 	|	     |	54   |	
+		    |_______|		|_______|	     |_______|
+				      
+A Binary Search tree(BST) is either empty or satisfies the following 3 conditions:
+
+--> Each element on the left subtree is less than or equal to the root element.
+
+--> Each element on the right subtree is greater than the root element.
+
+--> Both left tree and right tree are BSTs.
+
+--> This kind of tree is called Binary search tree.
+
+The above points are demonstrated in the above digram.
+
+

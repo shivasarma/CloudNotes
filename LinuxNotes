@@ -1,0 +1,204 @@
+sudo shutdown -h HH:MM "shutting down the system" // shuts down the system within the give lapse
+
+less <filepath> gives the details of the file
+
+head <filepath> givest the first few lines of the file
+
+do_something > somefile // command copies all the output of the do_something execution to somefile
+
+pipe is another program the inputs the out come to the piped command
+
+command1 | command2 | command3
+
+Searching in Command Prompt
+---------------------------
+
+==> you can use whereis command to do that
+whereis tar
+
+==> you can use whichis command to do that
+whichis tar
+
+==> use the locate program to do that
+locate tar
+
+==> can localise the search by piping it to grep which tries to match the patter
+locate tar | grep bin
+
+[CMD] locate ? file //Matches any single character
+
+[CMD] locate * file //Matches any string of characters
+
+[CMD] Matches any character in the set of characters for example [adf] will match any occurence of "a","d" or "f"
+
+[cmd] Does not matches any character in the set of characters
+
+
+find
+----
+
+==>The find program lists all files in the current directory and all of its subdirectories.
+
+==> Commonly used options to shorten the list include -name[pattern], -iname[ignore pattern]
+ and -type
+
+[cmd] find /usr -name -gcc
+
+[cmd] find /usr type d -name gcc //lists only directories
+
+[cmd] find /usr -type f -name gcc //lists only regular files
+
+
+[cmd] find -name "*swp" -exec rm {} ';' // the flower brackets is a place holder that will be filled with all the file names that result from the find expression and the preceding command will be run on each one individually.
+
+note that the command should end with ';'/";"
+
+one can also use the -ok option, which behaves the same as -exec
+
+//finding the files based on time
+
+[cmd] find / -ctime 3  //finds when the inode metadata last changed in days. 
+
+[cmd] find / -atime 3 //finds when the file last accessed in days
+
+[cmd] find / -mtime 3 //finds when the file last modified in days
+
+[cmd] find / -mmin 3 //finds when the file last modified in minutes
+
+-n indicates all the files that are less than the given period and +n indicates all the files that are greater than the given period.
+
+[cmd] find / -size 0 //enlists all the files with the 0 memory
+
+[cmd] find / -size +10M -exec command {} ';'
+
+// the above file executes the command for all the files that are greater than the 10Mb
+
+
+PACKAGE MANGERS
+---------------
+ => on every linux distribution there are two kinds of Package managers namely
+		1) Low level package mangers such as dpkg and rpm
+		2) Higher level package mangers such as apt and yum
+
+APT - Advanced Packaging Tool is the underlying package management system that manages software on Debian-based system.
+
+YUM - yellowdog updater modified is an opensource command-line package-management utility for RPM.
+Zypper - SUSE
+
+[cmd] sudo apt-cache policy <package>  //gives the state and repository of the package
+
+[cmd] sudo dpkg --list //enlists all the packages installed
+
+[cmd] sudo dpkg --status <package>  //gives the installation details of the package
+
+[cmd] sudo apt remove [package] removes the package
+
+[cmd] man -f //equivalent to whatis
+
+[cmd] man -k //equivalent to apropos
+
+[cmd] man 3 printf //displays the third
+
+some important urls to see the commands for linux commands are;
+
+http://linuxcommand.org/tlcl.php
+
+https://help.ubuntu.com
+
+https://www.centos.org/docs/
+
+http://en.opensuse.org/Portal:Documentation
+
+GENTOO: http://www.gentoo.org/doc/en
+
+[cmd]yelp	//command for gui of gnome-help
+
+
+Process Types
+-------------
+
+There are five kinds of processes;
+
+Interactive process:Need to be started by a user, either at a command line or through a graphical interface such as an icon or menu
+
+Batch Process:Automatic processes which are scheduled from and then disconnected from the terminal
+
+Daemons:Server processes that run continuosly. Many are launched during system startup and then wait for a user or system request indicating that their service is required.
+
+Threads: Lightweight processes. These are tasks that run under the umberalla of a main process, sharing memory and other resources, but are scheduled and run by the system on an individual basis.
+
+Kernel Threads: Kernel tasks that users neither start nor terminate and have little control over.
+
+A critical kernel function called the scheduler constantly shifts processes on and off the CPU,sharing time according to relative priority, how much time is needed and how much has already been granted to a task.
+
+
+There are three states:
+
+Runnning	// it means it is either currently executing instructions on a CPU, or is waiting to be granted a share of time (a time slice) so it can execute.
+
+sleep state	//generally when they are waiting for something to happen before they can resume
+
+
+
+BASH SCRIPTING
+--------------
+
+The following is the sample bash script
+
+#!/bin/bash
+echo "sairam"
+
+
+The first line #!/bin/bash  should be recognized by anyone who has developed any kind of script in UNIX environments.
+
+The first line of the script contains #! which states the complete path of the command interpreter
+
+We can opt for few more choices in command interpreter.
+
+Some of the interpreters are 
+
+--> /usr/bin/perl
+--> /bin/bash
+--> /bin/csh
+--> /usr/bin/python
+--> /bin/sh
+
+
+Linux provides a wide range of shells which are listed in /etc/shells
+
+	let us see how to create more interactive example
+
+	#!/bin/bash
+	# Interactive reading of a variable
+	echo "ENTER YOUR NAME"
+	read name
+	# Display variable input
+	echo the name given was :$name
+
+
+BASIC SYNTAX and Special Characters
+-----------------------------------
+
+# - used to add a comment, except when used as \# or as #!
+
+\ - used as newline character
+
+; - used to point a new command execution
+
+$ - indicates what follows is an environment variable
+
+> - Redirect Output
+
+>> - append output
+
+< - Redirect Input
+
+| - used to pipe the result into the next command
+
+
+The newline character is used to split the lengthy commands like
+
+scp google.com:/var/ftp/datas \
+ facebooke.com:/opt/datas/ 
+
+
